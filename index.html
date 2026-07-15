@@ -1,8 +1,140 @@
 <!DOCTYPE html>
 <html>
+<head>
+
+<meta charset="UTF-8">
+<title>Smile Sunshine</title>
+
+<style>
+
+body {
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#ffd6e5;
+    overflow:hidden;
+}
+
+.paper {
+
+    width:80%;
+    max-width:550px;
+    min-height:350px;
+
+    background:#fff7fa;
+
+    border-radius:25px;
+
+    padding:45px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,0.15);
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+}
+
+
+#text {
+
+    text-align:center;
+
+    font-family:cursive;
+
+    font-size:45px;
+
+    color:#8a4f6d;
+
+    line-height:1.7;
+
+    white-space:pre-line;
+
+}
+
+
+button {
+
+    display:none;
+
+    margin-top:40px;
+
+    padding:15px 35px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:#d98aaa;
+
+    color:white;
+
+    font-size:20px;
+
+}
+
+
+</style>
+
+</head>
+
+
 <body>
 
-<h1>TEST TEST TEST 🌸</h1>
+
+<div class="paper">
+
+<div id="text"></div>
+
+<button id="password">
+Enter Your Password 🔐
+</button>
+
+</div>
+
+
+
+<script>
+
+const message = Hi Sunshine...
+
+Let me see your gorgeous smile...;
+
+
+let i = 0;
+
+
+function typeWriter(){
+
+    if(i < message.length){
+
+        document.getElementById("text").innerHTML += message.charAt(i);
+
+        i++;
+
+        setTimeout(typeWriter,150);
+
+    } else {
+
+        setTimeout(function(){
+
+            document.getElementById("password").style.display="block";
+
+        },5000);
+
+    }
+
+}
+
+
+typeWriter();
+
+
+</script>
+
 
 </body>
 </html>
