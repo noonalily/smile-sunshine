@@ -57,3 +57,62 @@ typeWriter();
 
 </body>
 </html>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Smile Sunshine</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#ffe4ee;
+    overflow:hidden;
+}
+
+#text{
+    width:80%;
+    text-align:center;
+    font-family:'Dancing Script', cursive;
+    font-size:70px;
+    color:#8a4f6d;
+    line-height:1.7;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="text"></div>
+
+<script>
+
+const message = Hi Sunshine...
+
+Let me see your gorgeous smile...;
+
+let i = 0;
+
+function typeWriter() {
+    if (i < message.length) {
+        document.getElementById("text").innerHTML += message.charAt(i);
+        i++;
+        setTimeout(typeWriter, 140);
+    }
+}
+
+typeWriter();
+
+</script>
+
+</body>
+</html>
