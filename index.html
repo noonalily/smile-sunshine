@@ -5,51 +5,30 @@
 <title>Smile Sunshine</title>
 
 <style>
-
 body {
-    margin: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #ffd9e8;
-    overflow: hidden;
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#f7b6d2;
 }
 
 .paper {
-    width: 80%;
-    max-width: 600px;
-    min-height: 350px;
-    background: #fff1f6;
-    border-radius: 20px;
-    padding: 40px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    width:80%;
+    max-width:500px;
+    padding:50px;
+    background:#fff0f5;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+    text-align:center;
 }
 
 #text {
-    text-align: center;
-    font-family: cursive;
-    font-size: 45px;
-    color: #8a4f6d;
-    line-height: 1.8;
-    white-space: pre-line;
-}
-
-
-button {
-    display: none;
-    margin-top: 40px;
-    padding: 15px 35px;
-    border: none;
-    border-radius: 30px;
-    background: #d98aaa;
-    color: white;
-    font-size: 20px;
-    cursor: pointer;
+    font-family:cursive;
+    font-size:45px;
+    color:#8a4f6d;
+    white-space:pre-line;
 }
 
 </style>
@@ -59,19 +38,12 @@ button {
 <body>
 
 <div class="paper">
-
-<div id="text"></div>
-
-<button id="password">
-Enter Your Password 🔐
-</button>
-
+    <div id="text"></div>
 </div>
-
 
 <script>
 
-const message = Hi Sunshine...
+let message = Hi Sunshine...
 
 Let me see your gorgeous smile...;
 
@@ -81,16 +53,10 @@ function typeWriter(){
 
     if(i < message.length){
 
-        document.getElementById("text").innerHTML += message[i];
+        document.getElementById("text").innerHTML += message.charAt(i);
         i++;
 
-        setTimeout(typeWriter, 150);
-
-    } else {
-
-        setTimeout(() => {
-            document.getElementById("password").style.display = "block";
-        }, 5000);
+        setTimeout(typeWriter,150);
 
     }
 
