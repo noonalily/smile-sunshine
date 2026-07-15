@@ -5,41 +5,93 @@
 <title>Smile Sunshine</title>
 
 <style>
+
 body {
-  margin: 0;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #ffe4ee;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffd9e8;
+    overflow: hidden;
+}
+
+.paper {
+    width: 80%;
+    max-width: 600px;
+    min-height: 350px;
+    background: #fff1f6;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #text {
-  width: 80%;
-  text-align: center;
-  font-family: cursive;
-  font-size: 50px;
-  color: #8a4f6d;
+    text-align: center;
+    font-family: cursive;
+    font-size: 55px;
+    color: #8a4f6d;
+    line-height: 1.6;
 }
+
+button {
+    display: none;
+    margin-top: 40px;
+    padding: 15px 35px;
+    border: none;
+    border-radius: 30px;
+    background: #d98aaa;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
 </style>
 
 </head>
 
 <body>
 
+<div class="paper">
+
 <div id="text"></div>
+
+<button id="password">
+Enter Your Password 🔐
+</button>
+
+</div>
+
 
 <script>
 
-let message = "Hi Sunshine...\n\nLet me see your gorgeous smile...";
+const message = Hi Sunshine...
+
+Let me see your gorgeous smile...;
+
 let i = 0;
 
-function typeWriter() {
-  if (i < message.length) {
-    document.getElementById("text").innerHTML += message[i];
-    i++;
-    setTimeout(typeWriter, 150);
-  }
+function typeWriter(){
+
+    if(i < message.length){
+
+        document.getElementById("text").innerHTML += message[i];
+        i++;
+
+        setTimeout(typeWriter, 150);
+
+    } else {
+
+        setTimeout(() => {
+            document.getElementById("password").style.display = "block";
+        }, 5000);
+
+    }
+
 }
 
 typeWriter();
