@@ -6,29 +6,33 @@
 
 <style>
 body {
-    margin:0;
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:#f7b6d2;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffd6e5;
 }
 
 .paper {
-    width:80%;
-    max-width:500px;
-    padding:50px;
-    background:#fff0f5;
-    border-radius:20px;
-    box-shadow:0 10px 25px rgba(0,0,0,0.15);
-    text-align:center;
+    width: 80%;
+    max-width: 500px;
+    min-height: 300px;
+    background: #fff5f8;
+    padding: 45px;
+    border-radius: 25px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #text {
-    font-family:cursive;
-    font-size:45px;
-    color:#8a4f6d;
-    white-space:pre-line;
+    text-align: center;
+    font-family: cursive;
+    font-size: 45px;
+    color: #8a4f6d;
+    line-height: 1.7;
 }
 
 </style>
@@ -38,32 +42,14 @@ body {
 <body>
 
 <div class="paper">
-    <div id="text"></div>  
-    Hi Sunshine
-    <br><br>
-    Let ne see your gorgeous smile
+
+<div id="text">
+Hi Sunshine 🌸
+<br><br>
+Let me see your gorgeous smile...
 </div>
-    </div>
 
-
-let i = 0;
-
-function typeWriter(){
-
-    if(i < message.length){
-
-        document.getElementById("text").innerHTML += message.charAt(i);
-        i++;
-
-        setTimeout(typeWriter,150);
-
-    }
-
-}
-
-typeWriter();
-
-
+</div>
 
 </body>
 </html>
